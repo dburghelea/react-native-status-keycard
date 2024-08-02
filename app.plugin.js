@@ -70,12 +70,12 @@ module.exports = (config) =>
 					let contents = await readFile(file);
 
 					contents = contents.replace(
-						"configuration {\n      all*.exclude module: 'bcprov-jdk15on'\n    }",
+						"configurations {\n      all*.exclude module: 'bcprov-jdk15on'\n    }",
 						"",
 					);
 
 					const addedLines =
-						"configuration {\n      all*.exclude module: 'bcprov-jdk15on'\n    }";
+						"configurations {\n      all*.exclude module: 'bcprov-jdk15on'\n    }";
 
 					contents = contents.replace(
 						"packagingOptions {",
